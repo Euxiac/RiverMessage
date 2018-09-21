@@ -11,6 +11,7 @@ public class UserControl : MonoBehaviour {
 	public float turnSpeed = 180.0f;
 	public float divePower = 3.0f;
 	public float waterline = 2.4f;
+	public Vector3 playerPos;
 
 	public bool underwater =  false;
 
@@ -41,7 +42,8 @@ public class UserControl : MonoBehaviour {
 			transform.Rotate(transform.up * h * turnSpeed * Time.deltaTime); 
 			transform.position += transform.up * divePower * d * Time.deltaTime;
 		
-		Debug.Log ("Depth: " + underwater + Depth);
+		playerPos = new Vector3 (transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
+		//Debug.Log ("Depth: " + underwater + Depth);
 			//transform.Rotate(Vector3.right * Time.deltaTime);
 			//transform.Rotate(transform.right * d * Time.deltaTime);
 	}
