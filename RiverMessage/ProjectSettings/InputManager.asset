@@ -313,7 +313,7 @@ InputManager:
     m_Name: Cancel
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
+    negativeButton: enter
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
